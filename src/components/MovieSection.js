@@ -1,0 +1,21 @@
+import React from 'react';
+import { Typography, Box } from '@mui/material';
+import MoviePoster from './MoviePoster';
+import './MovieSection.css'; // Add custom styles for horizontal scroll
+
+const MovieSection = ({ title, movies }) => {
+  return (
+    <Box sx={{ mb: 4 }}>
+      <Typography variant="h5" sx={{ mb: 2 }}>
+        {title}
+      </Typography>
+      <Box className="movie-section">
+        {movies.map((movie) => (
+          <MoviePoster key={movie.id} movie={movie} />
+        ))}
+      </Box>
+    </Box>
+  );
+};
+
+export default MovieSection;

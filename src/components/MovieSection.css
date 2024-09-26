@@ -1,0 +1,22 @@
+.movie-section {
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px;
+    scrollbar-width: none; /* Hide scrollbar for modern look */
+  }
+  
+  .movie-section::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .movie-poster {
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .movie-poster:hover {
+    transform: scale(1.1); /* Enlarge poster on hover */
+  }
+  

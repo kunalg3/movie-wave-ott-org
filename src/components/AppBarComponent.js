@@ -46,7 +46,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const AppBarComponent = () => {
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: '#141414' }}>
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
           <MenuIcon />

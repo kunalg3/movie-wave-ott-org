@@ -1,27 +1,40 @@
 import React from 'react';
-import { CssBaseline, Container, Grid, Typography } from '@mui/material';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { CssBaseline, Container, ThemeProvider, createTheme } from '@mui/material';
 import AppBarComponent from './components/AppBarComponent';
-import MovieCard from './components/MovieCard';
+import MovieSection from './components/MovieSection';
 import movies from './data/movies'; // Assume you have a movies array with movie data
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    background: {
+      default: '#141414',  // Netflix-like background color
+    },
+    primary: {
+      main: '#e50914',  // Netflix-like red
+    },
+    secondary: {
+      main: '#ffffff',
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+  },
+});
 
 const App = () => {
   return (
-    <React.Fragment>
+    <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <AppBarComponent />
       <Container>
-        <Typography variant="h4" sx={{ my: 4 }}>
-          Browse Movies & Series
-        </Typography>
-        <Grid container spacing={4}>
-          {movies.map((movie) => (
-            <Grid item xs={12} sm={6} md={4} key={movie.id}>
-              <MovieCard movie={movie} />
-            </Grid>
-          ))}
-        </Grid>
+        {/* Pass movies and other section titles */}
+        <MovieSection title="Trending Now" movies={movies.slice(0, 5)} />
+        <MovieSection title="Watch Again" movies={movies.slice(5, 10)} />
       </Container>
-    </React.Fragment>
+    </ThemeProvider>
   );
 };
 
