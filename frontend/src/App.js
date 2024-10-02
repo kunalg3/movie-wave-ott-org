@@ -5,6 +5,8 @@ import { CssBaseline, Container, ThemeProvider, createTheme } from '@mui/materia
 import AppBarComponent from './components/AppBarComponent';
 import MovieSection from './components/MovieSection';
 import movies from './data/movies'; // Assume you have a movies array with movie data
+import HomePage from './pages/HomePage';
+import Banner from './components/BannerSlider';
 
 const darkTheme = createTheme({
   palette: {
@@ -13,7 +15,7 @@ const darkTheme = createTheme({
       default: '#141414',  // Netflix-like background color
     },
     primary: {
-      main: '#e50914',  // Netflix-like red
+      main: '#43e8fc',  // Netflix-like red
     },
     secondary: {
       main: '#ffffff',
@@ -30,7 +32,7 @@ const App = () => {
       <CssBaseline />
       <AppBarComponent />
       <Container>
-        {/* Pass movies and other section titles */}
+        <Banner/>
         <MovieSection title="Trending Now" movies={movies.slice(0, 5)} />
         <MovieSection title="Watch Again" movies={movies.slice(5, 10)} />
       </Container>

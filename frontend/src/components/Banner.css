@@ -1,0 +1,35 @@
+.banner-container {
+    width: 100%;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  
+  .banner-details {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+  }
+  
+  .play-button {
+    background-color: #1f80e0;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .play-button:hover {
+    background-color: #1671c1;
+  }
+  
