@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieSection from '../components/MovieSection';
-import Banner from '../components/BannerSlider';
+import Banner from '../components/Banner';
 import AppBarComponent from '../components/AppBarComponent';
 import movies from '../data/movies';
 import { Container } from '@mui/material';

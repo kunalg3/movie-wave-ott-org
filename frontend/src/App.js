@@ -6,7 +6,7 @@ import AppBarComponent from './components/AppBarComponent';
 import MovieSection from './components/MovieSection';
 import movies from './data/movies'; // Assume you have a movies array with movie data
 import HomePage from './pages/HomePage';
-import Banner from './components/BannerSlider';
+import Banner from './components/Banner';
 
 const darkTheme = createTheme({
   palette: {
