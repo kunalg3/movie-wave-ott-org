@@ -2,6 +2,10 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@mui/material';
 import { Search as SearchIcon, Menu as MenuIcon } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
+import RegisterPage from '../pages/RegisterPage';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -51,8 +55,23 @@ const AppBarComponent = () => {
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
-          MovieWave
+        <Typography variant="h6" noWrap sx={{ flexGrow: 2 }}>
+          MovieWave OTT
+        </Typography>
+        <Typography sx={{flexGrow:1}}>
+          <Link to="/">
+            Home 
+          </Link>
+        </Typography>
+        <Typography sx={{flexGrow:1}}>
+          <Link to="/login">
+            Login 
+          </Link>
+        </Typography>
+        <Typography sx={{flexGrow:10}}>
+          <Link to="/register">
+            Register 
+          </Link>
         </Typography>
         <Search>
           <SearchIconWrapper>

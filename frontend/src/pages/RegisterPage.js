@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import AppBarComponent from '../components/AppBarComponent';
+import Footer from '../components/Footer';
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +24,8 @@ const RegisterPage = () => {
   };
 
   return (
+    <>
+    <AppBarComponent/>
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-3xl font-bold text-center text-white mb-6">Create an Account</h2>
@@ -97,6 +101,8 @@ const RegisterPage = () => {
         </p>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

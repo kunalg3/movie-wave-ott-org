@@ -1,5 +1,8 @@
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -20,6 +23,8 @@ function Footer() {
           Follow us on:
         </Typography>
         {/* You can add social media icons, links, etc., here */}
+        <Link to="https://github.com/kunalg3"><GitHubIcon/></Link>
+        <Link to="https://www.linkedin.com/in/kunalgoyal446"><LinkedInIcon/></Link>
       </Container>
     </Box>
   );
