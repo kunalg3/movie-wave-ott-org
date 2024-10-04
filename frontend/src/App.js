@@ -2,11 +2,8 @@ import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CssBaseline, Container, ThemeProvider, createTheme } from '@mui/material';
-import AppBarComponent from './components/AppBarComponent';
-import MovieSection from './components/MovieSection';
-import movies from './data/movies'; // Assume you have a movies array with movie data
 import HomePage from './pages/HomePage';
-import Banner from './components/Banner';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
 
 const darkTheme = createTheme({
   palette: {
@@ -30,7 +27,11 @@ const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <HomePage/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
