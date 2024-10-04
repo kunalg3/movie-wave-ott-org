@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const RegisterPage = () => {
+const LoginPage = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -24,25 +24,9 @@ const RegisterPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-white mb-6">Create an Account</h2>
+        <h2 className="text-3xl font-bold text-center text-white mb-6">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Username Input */}
-          <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-400">
-              Username
-            </label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              value={formData.username}
-              onChange={handleChange}
-              required
-              className="mt-1 w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Enter your username"
-            />
-          </div>
-
+          
           {/* Email Input */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-400">
@@ -83,16 +67,16 @@ const RegisterPage = () => {
               type="submit"
               className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition duration-300"
             >
-              Sign Up
+              Login
             </button>
           </div>
         </form>
 
-        {/* Login Redirect */}
+        {/* Register Redirect */}
         <p className="text-center text-gray-400 mt-6">
-          Already have an account?{' '}
-          <a href="/login" className="text-blue-400 hover:underline">
-            Log in
+          Don't have account?{' '}
+          <a href="/register" className="text-blue-400 hover:underline">
+            Create Account
           </a>
         </p>
       </div>
@@ -100,4 +84,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default LoginPage;

@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import { CssBaseline, Container, ThemeProvider, createTheme } from '@mui/material';
 import HomePage from './pages/HomePage';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 const darkTheme = createTheme({
   palette: {
@@ -30,6 +32,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
+          <Route path='/register' element={<RegisterPage/>}/>
+          <Route path='/login' element={<LoginPage/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
