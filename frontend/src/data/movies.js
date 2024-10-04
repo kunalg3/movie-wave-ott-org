@@ -12,7 +12,7 @@ const movies = [
     {
       id: 3,
       title: 'Interstellar',
-      poster: 'https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg',
+      poster: 'https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10543523_p_v8_as.jpg',
     },
     {
       id: 4,
@@ -52,12 +52,12 @@ const movies = [
     {
       id: 11,
       title: 'The Matrix',
-      poster: 'https://image.tmdb.org/t/p/w500/aOYU7sqxEP1aeKmL0g8aPnOxqQz.jpg',
+      poster: 'https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg',
     },
     {
       id: 12,
       title: 'Mad Max: Fury Road',
-      poster: 'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg',
+      poster: 'https://m.media-amazon.com/images/M/MV5BZTEyZWFjNDktZjQwYy00ZDNhLThhODUtZWZjMmFhNzQ5Zjg1XkEyXkFqcGc@._V1_.jpg',
     },
     {
       id: 13,

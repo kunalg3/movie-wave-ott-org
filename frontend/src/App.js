@@ -30,12 +30,7 @@ const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <AppBarComponent />
-      <Container>
-        <Banner/>
-        <MovieSection title="Trending Now" movies={movies.slice(0, 5)} />
-        <MovieSection title="Watch Again" movies={movies.slice(5, 10)} />
-      </Container>
+      <HomePage/>
     </ThemeProvider>
   );
 };
