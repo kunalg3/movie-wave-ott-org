@@ -35,7 +35,7 @@ const App = () => {
           <Route path='/' element={<HomePage/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
-          <Route path='/video' element={<VideoEmbed/>}/>
+          <Route path='/video/:id' element={<VideoEmbed/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

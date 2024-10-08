@@ -6,12 +6,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const MovieSection = ({ title, movies }) => {
   
-  // const navigate=useNavigate();
-  // const handleMovieClick=(movie)=>{
-  //   <Link to ='/video/${movie.imdb_id}'/>
-  //   console.log("clicked movie");
-  // }
-
   return (
     <Box sx={{ mb: 4 }}>
       <Typography variant="h5" sx={{ mb: 2 }}>

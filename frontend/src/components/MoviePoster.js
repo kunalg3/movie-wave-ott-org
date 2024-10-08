@@ -7,7 +7,7 @@ const MoviePoster = ({ movie }) => {
   const navigate=useNavigate();
 
   const handleClick=()=>{
-    navigate(`/video`)
+    navigate(`/video/${movie.imdb_id}`)
   }
 
   return (
