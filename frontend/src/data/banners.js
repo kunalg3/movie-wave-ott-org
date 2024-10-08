@@ -32,7 +32,7 @@ const banners = [
     {
       id: 6,
       title: 'Big Hero 6',
-      poster: 'https://rukminim2.flixcart.com/image/850/1000/l3q7jww0/poster/v/p/m/medium-big-hero-6-animated-movie-hd-matte-finish-poster-original-imagesf6h2jgxzth.jpeg?q=90&crop=false',
+      poster: 'https://wallpapercat.com/w/full/b/c/0/48261-3840x2160-desktop-4k-big-hero-6-wallpaper-photo.jpg',
       imdb_id: 'tt2245084'
     }
   ];
