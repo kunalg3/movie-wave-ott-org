@@ -29,6 +29,12 @@ const banners = [
       poster: 'https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2021/01/12183050/Doctor-Strange-2-poster-with-breaking-realities.jpg',
       imdb_id: 'tt9419884'
     },
+    {
+      id: 6,
+      title: 'Big Hero 6',
+      poster: 'https://rukminim2.flixcart.com/image/850/1000/l3q7jww0/poster/v/p/m/medium-big-hero-6-animated-movie-hd-matte-finish-poster-original-imagesf6h2jgxzth.jpeg?q=90&crop=false',
+      imdb_id: 'tt2245084'
+    }
   ];
   
 export default banners;
