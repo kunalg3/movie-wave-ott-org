@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { Box, Typography, Button, CardMedia } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const MoviePoster = ({ movie }) => {
   const [hovered, setHovered] = useState(false);
+  const navigate=useNavigate();
+
+  const handleClick=()=>{
+    navigate(`/video`)
+  }
 
   return (
     <Box
@@ -31,8 +37,8 @@ const MoviePoster = ({ movie }) => {
           }}
         >
           <Typography variant="h6">{movie.title}</Typography>
-          <Button variant="outlined" sx={{ mt: 1 }}>
-            Add to Watchlist
+          <Button variant="outlined" sx={{ mt: 1 }} onClick={handleClick}>
+            Click To Play
           </Button>
         </Box>
       )}
