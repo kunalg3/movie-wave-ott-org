@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 const HomePage = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <AppBarComponent />
       <Container>
         <Banner/>
@@ -16,7 +16,7 @@ const HomePage = () => {
         <MovieSection title="Watch Again" movies={movies.slice(6, 12)} />
       </Container>
       <Footer/>
-    </>
+    </div>
   );
 };
 

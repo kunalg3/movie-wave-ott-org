@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieList from '../components/MovieList';
 
-const MoviesPage = () => {
+const MoviePage = () => {
   return (
     <div>
       <h1>All Movies</h1>
@@ -10,4 +10,4 @@ const MoviesPage = () => {
   );
 };
 
-export default MoviesPage;
+export default MoviePage;

@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@mui/material';
 import { Search as SearchIcon, Menu as MenuIcon } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
@@ -49,6 +49,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const AppBarComponent = () => {
+
+  const navigate=useNavigate();
+  const handleSearch=()=>{
+    navigate('/search')
+  }
+
   return (
     <AppBar position="sticky" sx={{ backgroundColor: '#141414' }}>
       <Toolbar>
@@ -73,7 +79,7 @@ const AppBarComponent = () => {
             Register 
           </Link>
         </Typography>
-        <Search>
+        <Search onClick={handleSearch}>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>

@@ -7,6 +7,7 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import VideoEmbed from './components/VideoEmbed';
+import Search from './pages/Search';
 
 const darkTheme = createTheme({
   palette: {
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/video/:id' element={<VideoEmbed/>}/>
+          <Route path='/search' element={<Search/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

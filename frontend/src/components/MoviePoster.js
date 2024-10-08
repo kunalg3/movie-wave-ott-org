@@ -19,8 +19,8 @@ const MoviePoster = ({ movie }) => {
     >
       <CardMedia
         component="img"
-        image={movie.poster}
-        alt={movie.title}
+        image={movie.Thumbnail}
+        alt={movie.Title}
         sx={{ height: 300, borderRadius: 2 }}
       />
       {hovered && (
@@ -36,7 +36,7 @@ const MoviePoster = ({ movie }) => {
             textAlign: 'center',
           }}
         >
-          <Typography variant="h6">{movie.title}</Typography>
+          <Typography variant="h6">{movie.Title}</Typography>
           <Button variant="outlined" sx={{ mt: 1 }} onClick={handleClick}>
             Click To Play
           </Button>
