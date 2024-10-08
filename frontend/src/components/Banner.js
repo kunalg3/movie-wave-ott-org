@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import banners from '../data/banners';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
   const NextArrow = (props) => {
@@ -51,6 +52,10 @@ const Banner = () => {
     dotsClass: "slick-dots custom-dots flex justify-center mt-4",
   };
 
+  const navigate=useNavigate();
+  const handleClick=(movie)=>{
+    navigate(`/video/${movie.imdb_id}`)
+  }
 
   return (
     <Box className="w-full h-[600px] relative overflow-hidden bg-black">
@@ -79,6 +84,7 @@ const Banner = () => {
                 variant="contained"
                 color="primary"
                 className="bg-blue-600 hover:bg-blue-500 px-6 py-2"
+                onClick={() => handleClick(movie)}
               >
                 Play
               </Button>
