@@ -49,9 +49,9 @@ const movies = [
   },
   {
     id: 9,
-    Title: 'Frozen II',
-    Thumbnail: 'https://image.tmdb.org/t/p/w500/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg',
-    imdb_id: 'tt4520988'
+    Title: 'Wonder Woman',
+    Thumbnail: 'https://image.tmdb.org/t/p/w500/gfJGlDaHuWimErCr5Ql0I8x9QSy.jpg',
+    imdb_id: 'tt0451279'
   },
   {
     id: 10,
@@ -79,9 +79,9 @@ const movies = [
   },
   {
     id: 14,
-    Title: 'Dune',
-    Thumbnail: 'https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg',
-    imdb_id: 'tt1160419'
+    Title: 'Frozen II',
+    Thumbnail: 'https://image.tmdb.org/t/p/w500/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg',
+    imdb_id: 'tt4520988'
   },
   {
     id: 15,
@@ -108,10 +108,10 @@ const movies = [
     imdb_id: 'tt2527338'
   },
   {
-    id: 19,
-    Title: 'Wonder Woman',
-    Thumbnail: 'https://image.tmdb.org/t/p/w500/gfJGlDaHuWimErCr5Ql0I8x9QSy.jpg',
-    imdb_id: 'tt0451279'
+    id: 9,
+    Title: 'Dune',
+    Thumbnail: 'https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg',
+    imdb_id: 'tt1160419'
   },
   {
     id: 20,
