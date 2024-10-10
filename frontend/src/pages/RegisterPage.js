@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AppBarComponent from '../components/AppBarComponent';
 import Footer from '../components/Footer';
+import axios from 'axios';
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +18,16 @@ const RegisterPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Implement form submission logic
     console.log('Form submitted:', formData);
+    try {
+      const result= await axios.post('/auth/signup',formData)
+      console.log(result.data)
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (

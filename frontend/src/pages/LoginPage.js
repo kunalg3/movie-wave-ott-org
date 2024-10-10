@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import AppBarComponent from '../components/AppBarComponent';
 import Footer from '../components/Footer';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +19,20 @@ const LoginPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const navigate=useNavigate()
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Implement form submission logic
     console.log('Form submitted:', formData);
+    try {
+      const result=await axios.post('/auth/login',formData)
+      console.log(result.data)
+      localStorage.setItem('token',result.data.token)
+      localStorage.setItem('username',result.data.username)
+      navigate('/')
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   return (

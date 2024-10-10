@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import VideoEmbed from './components/VideoEmbed';
 import Search from './pages/SearchPage';
 import ErrorPage from './pages/ErrorPage';
+import axios from 'axios'
 
 const darkTheme = createTheme({
   palette: {
@@ -27,6 +28,14 @@ const darkTheme = createTheme({
     fontFamily: 'Roboto, sans-serif',
   },
 });
+
+// Set base URL based on environment
+const baseURL = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:8000'
+  : 'https://property-portal-ud1k.onrender.com';
+
+axios.defaults.baseURL= baseURL;
+axios.defaults.withCredentials=true;
 
 const App = () => {
   return (

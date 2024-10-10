@@ -56,7 +56,12 @@ const AppBarComponent = () => {
   }
   const token=localStorage.getItem('token')
   const name=localStorage.getItem('username')
-  const [username, setUsername]=useState(name)
+  const [username, setUsername]=useState(name.toString())
+
+  const handleLogout=()=>{
+    localStorage.removeItem('token')
+    navigate('/')
+  }
 
   return (
     <AppBar position="sticky" sx={{ backgroundColor: '#141414' }}>
@@ -80,9 +85,9 @@ const AppBarComponent = () => {
             </Link>
             </Typography>
             <Typography sx={{flexGrow:10}}>
-            <Link to="/myaccount">
-              Logout
-            </Link>
+              <Box onClick={handleLogout} sx={{cursor:'pointer'}}>
+                Logout
+              </Box>
             </Typography>
           </Box>
         ):(
