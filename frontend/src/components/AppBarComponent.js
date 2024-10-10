@@ -1,5 +1,5 @@
-import React from 'react';
-import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, IconButton, Typography, InputBase, Box } from '@mui/material';
 import { Search as SearchIcon, Menu as MenuIcon } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
@@ -54,6 +54,9 @@ const AppBarComponent = () => {
   const handleSearch=()=>{
     navigate('/search')
   }
+  const token=localStorage.getItem('token')
+  const name=localStorage.getItem('username')
+  const [username, setUsername]=useState(name)
 
   return (
     <AppBar position="sticky" sx={{ backgroundColor: '#141414' }}>
@@ -64,21 +67,39 @@ const AppBarComponent = () => {
         <Typography variant="h6" noWrap sx={{ flexGrow: 2 }}>
           MovieWave OTT
         </Typography>
-        <Typography sx={{flexGrow:1}}>
+        <Typography sx={{flexGrow:2}}>
           <Link to="/">
             Home 
           </Link>
         </Typography>
-        <Typography sx={{flexGrow:1}}>
-          <Link to="/login">
-            Login 
-          </Link>
-        </Typography>
-        <Typography sx={{flexGrow:10}}>
-          <Link to="/register">
-            Register 
-          </Link>
-        </Typography>
+        {token?(
+          <Box sx={{flexGrow:9,display: 'flex'}}>
+            <Typography sx={{flexGrow:4}}>
+            <Link to="/myaccount">
+              Welcome back {username} !!!
+            </Link>
+            </Typography>
+            <Typography sx={{flexGrow:10}}>
+            <Link to="/myaccount">
+              Logout
+            </Link>
+            </Typography>
+          </Box>
+        ):(
+          <Box sx={{flexGrow:9,display: 'flex'}}>
+            <Typography sx={{flexGrow:4}}>
+            <Link to="/login">
+              Login 
+            </Link>
+            </Typography>
+            <Typography sx={{flexGrow:12}}>
+            <Link to="/register">
+              Register 
+            </Link>
+            </Typography>
+          </Box>
+        )}
+        
         <Search onClick={handleSearch}>
           <SearchIconWrapper>
             <SearchIcon />
