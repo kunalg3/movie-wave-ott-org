@@ -2,6 +2,7 @@ const express=require('express')
 const cors=require('cors')
 const testRoutes =require('./routes/testRoutes')
 const authRoutes =require('./routes/authRoutes')
+const movieRoutes=require('./routes/movieRoutes')
 
 const app=express()
 
@@ -15,6 +16,7 @@ app.use(cors({
 
 app.use('/test',testRoutes)
 app.use('/auth',authRoutes)
+app.use('/movie',movieRoutes)
 
 require('./config/dbConfig')
 
