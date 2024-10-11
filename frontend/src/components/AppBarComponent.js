@@ -56,7 +56,7 @@ const AppBarComponent = () => {
   }
   const token=localStorage.getItem('token')
   const name=localStorage.getItem('username')
-  const [username, setUsername]=useState(name.toString())
+  const [username, setUsername]=useState(name)
 
   const handleLogout=()=>{
     localStorage.removeItem('token')
