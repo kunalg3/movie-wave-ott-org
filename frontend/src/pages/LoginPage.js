@@ -3,6 +3,7 @@ import AppBarComponent from '../components/AppBarComponent';
 import Footer from '../components/Footer';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -23,15 +24,20 @@ const LoginPage = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     // Implement form submission logic
-    console.log('Form submitted:', formData);
     try {
-      const result=await axios.post('/auth/login',formData)
-      console.log(result.data)
-      localStorage.setItem('token',result.data.token)
-      localStorage.setItem('username',result.data.username)
-      navigate('/')
+      const response=await axios.post('/auth/login',formData)
+      console.log(response.data)
+      if(response.data.error){
+        toast.error(response.data.error)
+      }else{
+        localStorage.setItem('token',response.data.token)
+        localStorage.setItem('username',response.data.username)
+        toast.success("Login Successfully!")
+        navigate('/')
+      }
     } catch (error) {
       console.log(error)
+      toast.error("Login Failed! Internal sever error")
     }
   };
 

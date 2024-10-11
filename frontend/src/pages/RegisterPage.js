@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import AppBarComponent from '../components/AppBarComponent';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -18,15 +20,23 @@ const RegisterPage = () => {
     });
   };
 
+  const navigate=useNavigate();
+
   const handleSubmit = async(e) => {
     e.preventDefault();
     // Implement form submission logic
-    console.log('Form submitted:', formData);
     try {
-      const result= await axios.post('/auth/signup',formData)
-      console.log(result.data)
+      const response= await axios.post('/auth/signup',formData)
+      console.log(response.data)
+      if (response.data.error) {
+        toast.error(response.data.error)
+      } else {
+        toast.success("Account registered successfully")
+        navigate('/login')
+      }
     } catch (error) {
-      console.log(error)
+        console.log(error)
+        toast.error("Registration failed! Server Error")
     }
   };
 

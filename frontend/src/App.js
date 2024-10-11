@@ -10,6 +10,7 @@ import VideoEmbed from './components/VideoEmbed';
 import Search from './pages/SearchPage';
 import ErrorPage from './pages/ErrorPage';
 import axios from 'axios'
+import {Toaster} from 'react-hot-toast'
 
 const darkTheme = createTheme({
   palette: {
@@ -42,6 +43,7 @@ const App = () => {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <BrowserRouter>
+      <Toaster position='top-center' toastOptions={{duration:2000}}/>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
