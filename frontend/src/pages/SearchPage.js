@@ -58,7 +58,7 @@ function Search() {
 
       {/* Display search results */}
       <Box display="flex" justifyContent="space-between" >
-        {searchResults.length>0 ? (
+        {searchResults ? (
             searchResults.map((movie) => (
                 <SearchMoviePoster key={movie.Id} movie={movie}/>
             ))
