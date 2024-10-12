@@ -31,7 +31,7 @@ const LoginPage = () => {
         toast.error(response.data.error)
       }else{
         localStorage.setItem('token',response.data.token)
-        localStorage.setItem('username',response.data.username)
+        localStorage.setItem('username',response.data.user.username)
         toast.success("Login Successfully!")
         navigate('/')
       }

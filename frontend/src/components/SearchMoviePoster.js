@@ -36,7 +36,7 @@ const SearchMoviePoster = ({ movie }) => {
             textAlign: 'center',
           }}
         >
-          <Typography variant="h6">{movie.Title}</Typography>
+          <Typography variant="h6">{movie.title}</Typography>
           <Button variant="outlined" sx={{ mt: 1 }} onClick={handleClick}>
             Click To Play
           </Button>

@@ -57,7 +57,7 @@ function Search() {
       </Box>
 
       {/* Display search results */}
-      <Box display="flex" justifyContent="space-between" >
+      <Box display="flex" justifyContent="space-around" flex-wrap='wrap' >
         {searchResults ? (
             searchResults.map((movie) => (
                 <SearchMoviePoster key={movie.Id} movie={movie}/>
