@@ -1,5 +1,5 @@
 import { useState } from "react";
-function test() {
+function Test() {
   const data = [
     { id: 1, title: "name", content: "hello" },
     { id: 2, title: "name", content: "hello" },
@@ -24,4 +24,4 @@ function test() {
     </div>
   );
 }
-export default test
+export default Test
