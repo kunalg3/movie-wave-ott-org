@@ -70,7 +70,9 @@ const AppBarComponent = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap sx={{ flexGrow: 2 }}>
-          MovieWave OTT
+          <Link to="/">
+            MovieWave OTT
+          </Link>
         </Typography>
         <Typography sx={{flexGrow:2}}>
           <Link to="/">
