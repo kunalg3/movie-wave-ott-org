@@ -11,6 +11,7 @@ import Search from './pages/SearchPage';
 import ErrorPage from './pages/ErrorPage';
 import axios from 'axios'
 import {Toaster} from 'react-hot-toast'
+import test from './pages/test';
 
 const darkTheme = createTheme({
   palette: {
@@ -51,6 +52,7 @@ const App = () => {
           <Route path='/video/:id' element={<VideoEmbed/>}/>
           <Route path='/search' element={<Search/>}/>
           <Route path='*' element={<ErrorPage/>}/>
+          <Route path='/test' element={<test/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
